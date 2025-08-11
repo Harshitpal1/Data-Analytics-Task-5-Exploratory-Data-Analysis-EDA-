@@ -1,91 +1,92 @@
-# Data-Analytics-Task-5-Exploratory-Data-Analysis-EDA-
-ask 5: Exploratory Data Analysis (EDA) 
-
-This repository contains the work for the Data Analyst Internship task focused on Exploratory Data Analysis.
+#Exploratory Data Analysis on the Titanic Dataset
+This repository contains the solution for the Task 5: Exploratory Data Analysis (EDA) as part of the Data Analyst Internship selection process for Elevate Labs.
 
 Objective
-The primary goal is to analyze a dataset to extract insights using visual and statistical exploration techniques.
+The primary objective of this project is to perform a thorough exploratory data analysis on the Titanic dataset. The goal is to uncover underlying patterns, identify trends, and extract meaningful insights about the factors that influenced passenger survival during the disaster.
 
 Dataset
-The analysis was performed on the 
+The analysis was conducted on the classic Titanic Dataset, which contains demographic and travel information for passengers aboard the Titanic.
 
-Titanic Dataset.
+Tools and Libraries
+Language: Python
 
-Tools Used
-Python 
+Libraries:
 
-Pandas 
+Pandas: For data manipulation and cleaning.
 
-Matplotlib 
+Matplotlib & Seaborn: For data visualization and plotting.
 
-Seaborn 
+Jupyter Notebook: As the development environment.
 
-Interview Questions 
+Analysis Workflow
+The EDA was structured around the hints provided in the task description and followed a standard data analysis workflow:
 
-Below are the answers to the interview questions listed in the task.
+Data Loading and Inspection: The dataset was loaded, and initial inspections were performed using .info(), .describe(), and .value_counts() to understand its structure, identify missing values, and get a statistical summary.
 
-1. What is EDA and why is it important? 
+Data Cleaning: Missing values, especially in the 'Age' and 'Embarked' columns, were handled appropriately.
 
+Univariate Analysis: Individual features were analyzed using histograms and count plots to understand their distributions (e.g., age distribution, passenger class distribution).
 
-Exploratory Data Analysis (EDA) is the process of investigating datasets to summarize their main characteristics, often using data visualization and statistical methods. It is important because it helps to identify patterns, spot anomalies, test hypotheses, and check assumptions before formal modeling.
+Bivariate and Multivariate Analysis: Relationships between variables were explored. Key visualizations included:
 
-2. Which plots do you use to check correlation? 
+Bar charts to compare survival rates across different categories (like Gender and Pclass).
 
+Scatter plots to investigate relationships between numerical variables.
 
-To check for correlation, the most common plots are:
+A heatmap based on a correlation matrix to quickly identify correlations.
 
+A pairplot to get a comprehensive overview of pairwise relationships.
 
-Heatmaps: Excellent for visualizing the correlation matrix of multiple variables at once.
+Insight Generation: Observations were documented for each visual, and a final summary of findings was compiled to explain the factors affecting survival.
 
+Interview Questions & Answers
+This section provides answers to the interview questions listed in the task.
 
-Scatterplots: Used to visualize the relationship between two specific numerical variables.
+1. What is EDA and why is it important?
+Exploratory Data Analysis (EDA) is the process of analyzing and visualizing datasets to summarize their main characteristics, uncover patterns, and identify anomalies. It is critically important because it provides the foundational understanding of the data before formal modeling, helping to guide feature engineering, hypothesis testing, and the selection of appropriate analytical techniques.
 
+2. Which plots do you use to check correlation?
+To check for correlation, the most effective plots are:
 
-Pairplots: Creates a grid of scatterplots to show pairwise relationships between several variables in a dataset.
+Heatmap: Best for visualizing a correlation matrix of multiple variables.
 
-3. How do you handle skewed data? 
+Scatter Plot: Ideal for examining the relationship between two specific numerical variables.
 
+Pair Plot: Useful for getting a quick overview of pairwise relationships across all numerical variables in a dataset.
 
-Skewed data can be handled by applying mathematical transformations to make its distribution more symmetrical (or normal). Common techniques include:
+3. How do you handle skewed data?
+Skewed data can be handled by applying mathematical transformations to make its distribution more symmetric (or "normal-like"). Common techniques include:
 
-Log transformation
+Log Transformation: Effective for data with positive skew.
 
-Square root transformation
+Square Root Transformation: A milder transformation for positive skew.
 
-Box-Cox transformation
+Box-Cox Transformation: A statistical method that finds the optimal power transformation for the data.
 
-4. How to detect multicollinearity? 
-
-
+4. How to detect multicollinearity?
 Multicollinearity (high correlation between independent variables) can be detected using:
 
-Correlation Matrix: A heatmap can visually expose high correlation values between variables.
+Correlation Matrix: A heatmap can visually reveal high correlation values (e.g., > 0.7 or < -0.7) between variables.
 
-Variance Inflation Factor (VIF): VIF is a score that quantifies the severity of multicollinearity in a regression analysis. A high VIF (often > 5 or 10) indicates a problem.
+Variance Inflation Factor (VIF): VIF measures how much the variance of a regression coefficient is inflated due to its correlation with other predictors. A VIF score greater than 5 or 10 is often considered problematic.
 
-5. What are univariate, bivariate, and multivariate analyses? 
+5. What are univariate, bivariate, and multivariate analyses?
+Univariate Analysis: Analyzing a single variable to describe its properties (e.g., histogram, box plot, mean).
 
-Univariate Analysis: Analyzing a single variable at a time to understand its distribution and characteristics. Examples include histograms and boxplots.
+Bivariate Analysis: Analyzing two variables to explore their relationship (e.g., scatter plot, bar chart comparing two groups).
 
-Bivariate Analysis: Analyzing two variables to explore the relationship between them. Examples include scatterplots and correlation heatmaps.
+Multivariate Analysis: Analyzing three or more variables simultaneously to understand their complex interactions (e.g., 3D scatter plot, correlation heatmap).
 
-Multivariate Analysis: Analyzing three or more variables simultaneously to understand their complex interactions. A pairplot is an example of a visualization used for this purpose.
+6. Difference between heatmap and pairplot?
+A heatmap is a single plot that uses color to represent the magnitude of correlation between all pairs of variables in a matrix, providing a quick, high-level summary. In contrast, a pairplot creates a grid of several plots, showing detailed scatterplots for each pairwise relationship and the distribution of each individual variable on the diagonal. It offers a more granular visual inspection.
 
-6. Difference between heatmap and pairplot? 
+7. How do you summarize your insights?
+To summarize insights effectively, you should:
 
-Heatmap: A heatmap is a single plot that uses color to represent the magnitude of the correlation between every pair of variables in a dataset. It provides a quick, high-level summary of relationships.
+Start with the most significant findings.
 
-Pairplot: A pairplot creates a grid of plots. It shows scatterplots for the relationships between each pair of variables and the distribution (usually a histogram) of each single variable on the diagonal. It provides a more detailed, granular view of both distributions and relationships.
+Clearly and concisely state each conclusion.
 
-7. How do you summarize your insights? 
+Support your claims with evidence from your analysis (e.g., "As seen in the bar chart of survival by gender...").
 
-
-To summarize insights, you should:
-
-State the key findings clearly and concisely.
-
-Relate the findings back to the objective of the analysis.
-
-Use observations from visuals (plots, charts) and statistical tests as evidence.
-
-Highlight any identified trends, patterns, or anomalies discovered during the exploration.
+Relate the insights back to the main objective of the analysis.
