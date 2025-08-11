@@ -1,92 +1,82 @@
-#Exploratory Data Analysis on the Titanic Dataset
-This repository contains the solution for the Task 5: Exploratory Data Analysis (EDA) as part of the Data Analyst Internship selection process for Elevate Labs.
+# Task 5: Exploratory Data Analysis (EDA)  
+**Data Analyst Internship – Elevate Labs**  
 
-Objective
-The primary objective of this project is to perform a thorough exploratory data analysis on the Titanic dataset. The goal is to uncover underlying patterns, identify trends, and extract meaningful insights about the factors that influenced passenger survival during the disaster.
+## 📌 Objective  
+Perform a comprehensive Exploratory Data Analysis (EDA) on the Titanic dataset to extract meaningful insights using statistical and visual exploration techniques.  
 
-Dataset
-The analysis was conducted on the classic Titanic Dataset, which contains demographic and travel information for passengers aboard the Titanic.
+---
 
-Tools and Libraries
-Language: Python
+## 📂 Dataset  
+- **Name:** Titanic Dataset (as recommended in task description)  
+- **Source:** Provided by Elevate Labs  
+- **Description:** Passenger details such as demographics, ticket class, fare, and survival status.  
 
-Libraries:
+---
 
-Pandas: For data manipulation and cleaning.
+## 🛠 Tools Used  
+- **Python** – Data analysis and scripting  
+- **Pandas** – Data manipulation and inspection  
+- **Matplotlib** – Data visualization  
+- **Seaborn** – Advanced and aesthetic plotting  
 
-Matplotlib & Seaborn: For data visualization and plotting.
+---
 
-Jupyter Notebook: As the development environment.
+## 🔍 EDA Process  
 
-Analysis Workflow
-The EDA was structured around the hints provided in the task description and followed a standard data analysis workflow:
+### **1. Initial Data Inspection**
+- `.info()` – Data types and missing values  
+- `.describe()` – Statistical summaries  
+- `.value_counts()` – Categorical variable distributions  
 
-Data Loading and Inspection: The dataset was loaded, and initial inspections were performed using .info(), .describe(), and .value_counts() to understand its structure, identify missing values, and get a statistical summary.
+### **2. Data Visualization**
+- **Histograms** – Numerical distributions  
+- **Boxplots** – Outlier detection  
+- **Scatterplots** – Relationship analysis  
+- **Heatmap** – Correlation identification  
+- **Pairplot** – Pairwise relationships and distributions  
 
-Data Cleaning: Missing values, especially in the 'Age' and 'Embarked' columns, were handled appropriately.
+### **3. Key Insights**
+- Females had a significantly higher survival rate than males.  
+- Passengers in higher classes had better survival rates.  
+- Younger passengers had slightly better survival chances.  
+- Higher fares correlated with better survival probability.  
 
-Univariate Analysis: Individual features were analyzed using histograms and count plots to understand their distributions (e.g., age distribution, passenger class distribution).
+---
 
-Bivariate and Multivariate Analysis: Relationships between variables were explored. Key visualizations included:
+## 💬 Interview Q&A  
 
-Bar charts to compare survival rates across different categories (like Gender and Pclass).
+**1. What is EDA and why is it important?**  
+EDA is the process of summarizing a dataset’s main characteristics through statistics and visualizations. It helps identify patterns, anomalies, and trends before modeling.  
 
-Scatter plots to investigate relationships between numerical variables.
+**2. Which plots do you use to check correlation?**  
+- Heatmap (correlation matrix)  
+- Scatterplot (two numerical variables)  
+- Pairplot (multiple scatterplots for all pairs)  
 
-A heatmap based on a correlation matrix to quickly identify correlations.
+**3. How do you handle skewed data?**  
+- Log Transformation  
+- Square Root Transformation  
+- Box-Cox Transformation  
 
-A pairplot to get a comprehensive overview of pairwise relationships.
+**4. How to detect multicollinearity?**  
+- Correlation Matrix (Heatmap)  
+- Variance Inflation Factor (VIF > 5 or 10)  
 
-Insight Generation: Observations were documented for each visual, and a final summary of findings was compiled to explain the factors affecting survival.
+**5. What are univariate, bivariate, and multivariate analyses?**  
+- **Univariate**: One variable (e.g., histogram)  
+- **Bivariate**: Two variables (e.g., scatterplot)  
+- **Multivariate**: More than two variables (e.g., pairplot)  
 
-Interview Questions & Answers
-This section provides answers to the interview questions listed in the task.
+**6. Difference between Heatmap and Pairplot?**  
+- **Heatmap**: Color-coded summary of correlations in a matrix.  
+- **Pairplot**: Scatterplots and distributions for each pair of variables.  
 
-1. What is EDA and why is it important?
-Exploratory Data Analysis (EDA) is the process of analyzing and visualizing datasets to summarize their main characteristics, uncover patterns, and identify anomalies. It is critically important because it provides the foundational understanding of the data before formal modeling, helping to guide feature engineering, hypothesis testing, and the selection of appropriate analytical techniques.
+**7. How do you summarize insights?**  
+State key findings, link them to objectives, and support them with evidence from visuals and statistics.  
 
-2. Which plots do you use to check correlation?
-To check for correlation, the most effective plots are:
+---
 
-Heatmap: Best for visualizing a correlation matrix of multiple variables.
+## 📊 Final Summary of Findings  
+The Titanic EDA revealed that survival chances were influenced by gender, passenger class, fare, and age. Females and first-class passengers had significantly better survival rates, suggesting socio-economic status and gender norms impacted rescue priorities.  
 
-Scatter Plot: Ideal for examining the relationship between two specific numerical variables.
-
-Pair Plot: Useful for getting a quick overview of pairwise relationships across all numerical variables in a dataset.
-
-3. How do you handle skewed data?
-Skewed data can be handled by applying mathematical transformations to make its distribution more symmetric (or "normal-like"). Common techniques include:
-
-Log Transformation: Effective for data with positive skew.
-
-Square Root Transformation: A milder transformation for positive skew.
-
-Box-Cox Transformation: A statistical method that finds the optimal power transformation for the data.
-
-4. How to detect multicollinearity?
-Multicollinearity (high correlation between independent variables) can be detected using:
-
-Correlation Matrix: A heatmap can visually reveal high correlation values (e.g., > 0.7 or < -0.7) between variables.
-
-Variance Inflation Factor (VIF): VIF measures how much the variance of a regression coefficient is inflated due to its correlation with other predictors. A VIF score greater than 5 or 10 is often considered problematic.
-
-5. What are univariate, bivariate, and multivariate analyses?
-Univariate Analysis: Analyzing a single variable to describe its properties (e.g., histogram, box plot, mean).
-
-Bivariate Analysis: Analyzing two variables to explore their relationship (e.g., scatter plot, bar chart comparing two groups).
-
-Multivariate Analysis: Analyzing three or more variables simultaneously to understand their complex interactions (e.g., 3D scatter plot, correlation heatmap).
-
-6. Difference between heatmap and pairplot?
-A heatmap is a single plot that uses color to represent the magnitude of correlation between all pairs of variables in a matrix, providing a quick, high-level summary. In contrast, a pairplot creates a grid of several plots, showing detailed scatterplots for each pairwise relationship and the distribution of each individual variable on the diagonal. It offers a more granular visual inspection.
-
-7. How do you summarize your insights?
-To summarize insights effectively, you should:
-
-Start with the most significant findings.
-
-Clearly and concisely state each conclusion.
-
-Support your claims with evidence from your analysis (e.g., "As seen in the bar chart of survival by gender...").
-
-Relate the insights back to the main objective of the analysis.
+---
